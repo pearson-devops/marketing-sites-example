@@ -8,7 +8,7 @@ export const Actions = ({
   parentField = "",
   className = "",
   actions,
-}: {parentColor: string, parentField: any, className:string, actions: any}) => {
+}) => {
   const theme = React.useContext(ThemeContext);
   const buttonColorClasses = {
     blue: "text-white bg-blue-500 hover:bg-blue-600 bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-400 hover:to-blue-500",
