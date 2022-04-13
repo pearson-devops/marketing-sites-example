@@ -20,9 +20,10 @@ export default function HomePage(
 
 export const getStaticProps = async ({ params }) => {
   const client = ExperimentalGetTinaClient();
-  const tinaProps = await client.ContentQuery({
+  /*const tinaProps = await client.ContentQuery({
     relativePath: `${params.filename}.md`,
-  });
+  });*/
+  const tinaProps = await client.getPostsDocument({relativePath: `${params.filename}.md`});
   return {
     props: {
       data: tinaProps.data,
